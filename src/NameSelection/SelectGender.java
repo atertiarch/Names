@@ -17,27 +17,12 @@ public class SelectGender {
 		}
 	}
 	
-<<<<<<< HEAD
-	public static Path FileInput (String gender){
-		Path fileName=null;
-		//work on directories!!
-<<<<<<< HEAD
-		Path nameBoy = Paths.get("c:/Users/Ewa/workspace_eclipse/Names/", "NameBoy.txt");
-	    Path nameGirl = Paths.get("c:/Users/Ewa/workspace_eclipse/Names/", "NameGirl.txt");
-=======
-		Path nameBoy = Paths.get("/Names/", "NameBoy.txt");
-	    Path nameGirl = Paths.get("/Names/", "NameGirl.txt");
-=======
 	public static Path fileInput (String gender){
 		Path fileName=null;
 		//work on directories!!
-		Path nameBoy = Paths.get("", "NameBoy.txt");
-	    Path nameGirl = Paths.get("", "NameGirl.txt");
->>>>>>> 79301020c60657e6d57ffa06488aa32677b792a4
-<<<<<<< HEAD
->>>>>>> 6468d8237adbe97660d873eb5e791d1bcf1f4640
-=======
->>>>>>> 6468d8237adbe97660d873eb5e791d1bcf1f4640
+		Path nameBoy = Paths.get("C:/Users/Ewa/workspace_eclipse/Names/src/Names", "NameBoy.txt");
+	    Path nameGirl = Paths.get("C:/Users/Ewa/workspace_eclipse/Names/src/Names", "NameGirl.txt");
+
 	    
 	    	if (gender.equals("b") || gender.equals("boy")) {
 				fileName = nameBoy;
@@ -46,23 +31,17 @@ public class SelectGender {
 				fileName = nameGirl;
 		    }
 		    else
-		    //need to work on that as well
 		    	System.out.println("Error");
 		
-<<<<<<< HEAD
-	    ReadLines(fileName);
-=======
 	    readLines(fileName);
->>>>>>> 79301020c60657e6d57ffa06488aa32677b792a4
+
 	    return fileName;
 	}
 	
 
-<<<<<<< HEAD
-	public static List<String> ReadLines (Path fileName){
-=======
+
 	public static List<String> readLines (Path fileName){
->>>>>>> 79301020c60657e6d57ffa06488aa32677b792a4
+
 		List<String> namesList = null;
 		Charset charset = Charset.forName("ISO-8859-1");
 		
@@ -76,26 +55,17 @@ public class SelectGender {
 		return namesList;
 	}
 
-<<<<<<< HEAD
-	public static String DecideRandNorm(String methodChosen, String gender){
-=======
+
 	public static String decideRandNorm(String methodChosen, String gender){
->>>>>>> 79301020c60657e6d57ffa06488aa32677b792a4
+
 		String method = null;
 		fileInput(gender);
 		
 		if (methodChosen.equals("r") || methodChosen.equals("random")){
-<<<<<<< HEAD
-			RandomName.NameRandom(ReadLines(FileInput(gender)));
-		}
-		else if (methodChosen.equals("n") || methodChosen.equals("normal")){
-			ChooseName.NameSelector(ReadLines(FileInput(gender)));
-=======
 			RandomName.nameRandom(readLines(fileInput(gender)));
 		}
 		else if (methodChosen.equals("n") || methodChosen.equals("normal")){
 			ChooseName.nameSelector(readLines(fileInput(gender)));
->>>>>>> 79301020c60657e6d57ffa06488aa32677b792a4
 		}
 		else
 			System.out.println("Error");
