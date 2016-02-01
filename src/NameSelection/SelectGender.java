@@ -19,9 +19,9 @@ public class SelectGender {
 	
 	public static Path fileInput (String gender){
 		Path fileName=null;
-		//work on directories!!
-		Path nameBoy = Paths.get("C:/Users/Ewa/workspace_eclipse/Names/src/Names", "NameBoy.txt");
-	    Path nameGirl = Paths.get("C:/Users/Ewa/workspace_eclipse/Names/src/Names", "NameGirl.txt");
+		
+		Path nameBoy = Paths.get("NameBoy.txt");
+	    Path nameGirl = Paths.get("NameGirl.txt");
 
 	    
 	    	if (gender.equals("b") || gender.equals("boy")) {
