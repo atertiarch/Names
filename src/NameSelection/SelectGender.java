@@ -34,6 +34,9 @@ public class SelectGender {
 		Path nameBoy = Paths.get("", "NameBoy.txt");
 	    Path nameGirl = Paths.get("", "NameGirl.txt");
 >>>>>>> 79301020c60657e6d57ffa06488aa32677b792a4
+<<<<<<< HEAD
+>>>>>>> 6468d8237adbe97660d873eb5e791d1bcf1f4640
+=======
 >>>>>>> 6468d8237adbe97660d873eb5e791d1bcf1f4640
 	    
 	    	if (gender.equals("b") || gender.equals("boy")) {
