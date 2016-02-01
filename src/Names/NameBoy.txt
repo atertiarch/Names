@@ -10,7 +10,4 @@ Hieronim
 Makary
 Filemon
 Bonifacy
-Brunon
-Joachim
-Judasz
-Rafael
+Konstanty
