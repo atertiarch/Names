@@ -4,14 +4,14 @@ import java.util.List;
 
 public class RandomName {
 	
-	public static String NameRandom (List<String> NamesList){
-		String TheName = null;
-		Integer randomNum = 0 + (int)(Math.random() * NamesList.size()); 
+	public static String nameRandom (List<String> namesList){
+		String theName = null;
+		Integer randomNum = 0 + (int)(Math.random() * namesList.size()); 
 			
-		TheName = NamesList.get(randomNum);
+		theName = namesList.get(randomNum);
 			
-		System.out.println(TheName);
+		System.out.println(theName);
 			
-		return TheName;
+		return theName;
 	}
 }

@@ -8,59 +8,59 @@ import java.io.IOException;
 public class SelectGender {
 
 	public static void main(String[] args) {
-		try(Scanner user_input = new Scanner(System.in)){	
+		try(Scanner userInput = new Scanner(System.in)){	
 			System.out.println("Choose gender: (b)oy or (g)irl?");
-			String gender = user_input.nextLine();
+			String gender = userInput.nextLine();
 			System.out.println("Choose method: (r)andom or (n)ormal?");
-			String method = user_input.nextLine();
-			DecideRandNorm(method, gender);
+			String method = userInput.nextLine();
+			decideRandNorm(method, gender);
 		}
 	}
 	
-	public static Path FileInput (String gender){
-		Path FileName=null;
+	public static Path fileInput (String gender){
+		Path fileName=null;
 		//work on directories!!
-		Path NameBoy = Paths.get("c:/Users/Ewa/workspace_eclipse/Names/src/Names/", "NameBoy.txt");
-	    Path NameGirl = Paths.get("c:/Users/Ewa/workspace_eclipse/Names/src/Names/", "NameGirl.txt");
+		Path nameBoy = Paths.get("", "NameBoy.txt");
+	    Path nameGirl = Paths.get("", "NameGirl.txt");
 	    
 	    	if (gender.equals("b") || gender.equals("boy")) {
-				FileName = NameBoy;
+				fileName = nameBoy;
 		    }
 		    else if (gender.equals("g") || gender.equals("girl")) {
-				FileName = NameGirl;
+				fileName = nameGirl;
 		    }
 		    else
 		    //need to work on that as well
 		    	System.out.println("Ani to ani sio");
 		
-	    ReadLines(FileName);
-	    return FileName;
+	    readLines(fileName);
+	    return fileName;
 	}
 	
 
-	public static List<String> ReadLines (Path FileName){
-		List<String> NamesList = null;
+	public static List<String> readLines (Path fileName){
+		List<String> namesList = null;
 		Charset charset = Charset.forName("ISO-8859-1");
 		
 		try {
-			NamesList = Files.readAllLines(FileName, charset);
+			namesList = Files.readAllLines(fileName, charset);
 		}
 		catch (IOException e) {
   	      	System.out.println("Error: " + e);
 		}
 	    
-		return NamesList;
+		return namesList;
 	}
 
-	public static String DecideRandNorm(String MethodChosen, String gender){
+	public static String decideRandNorm(String methodChosen, String gender){
 		String method = null;
-		FileInput(gender);
+		fileInput(gender);
 		
-		if (MethodChosen.equals("r") || MethodChosen.equals("random")){
-			RandomName.NameRandom(ReadLines(FileInput(gender)));
+		if (methodChosen.equals("r") || methodChosen.equals("random")){
+			RandomName.nameRandom(readLines(fileInput(gender)));
 		}
-		else if (MethodChosen.equals("n") || MethodChosen.equals("normal")){
-			ChooseName.NameSelector(ReadLines(FileInput(gender)));
+		else if (methodChosen.equals("n") || methodChosen.equals("normal")){
+			ChooseName.nameSelector(readLines(fileInput(gender)));
 		}
 		else
 			System.out.println("Error");
